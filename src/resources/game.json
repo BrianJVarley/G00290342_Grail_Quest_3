@@ -180,7 +180,7 @@
 
          "@name": "Sword",
 
-         "@locationID": "1"
+         "@locationID": "Tiberius"
 
       },
 
@@ -188,7 +188,7 @@
 
          "@name": "Mace",
 
-         "@locationID": "2"
+         "@locationID": "Desert"
 
       },
 
@@ -196,7 +196,7 @@
 
          "@name": "Greek Fire",
 
-         "@locationID": "2"
+         "@locationID": "Tarsus"
 
       },
 
@@ -204,7 +204,7 @@
 
          "@name": "Food",
 
-         "@locationID": "3"
+         "@locationID": "Tiberius"
 
       },
 
@@ -212,7 +212,7 @@
 
          "@name": "Medicine",
 
-         "@locationID": "3"
+         "@locationID": "Antioch"
 
       }
 

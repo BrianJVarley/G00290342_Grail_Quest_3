@@ -31,9 +31,12 @@ public class GameParser {
 					
 				// read from file, convert it to Location class
 				Location loc = mapper.readValue(new File(sourceURL.toURI()), Location.class);
+				Item item = mapper.readValue(new File(sourceURL.toURI()), Item.class);
+
 		 
 				// display to console
 				System.out.println(loc.toString());
+				System.out.println(item.toString());
 		 
 			} catch (JsonGenerationException e) {
 		 

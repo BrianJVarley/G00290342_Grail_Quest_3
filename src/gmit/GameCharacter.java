@@ -25,5 +25,8 @@ public class GameCharacter {
     {
         this.searchAlgorithm = searchAlgorithm;
     }
+    
+    
+    
 
 }
