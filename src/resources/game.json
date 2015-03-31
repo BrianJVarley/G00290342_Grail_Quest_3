@@ -1,0 +1,291 @@
+{
+
+   "location": [
+
+      {
+
+         "name": "Tiberius",
+
+         "description": "You are in the city of Tiberius. You see a long street with high buildings and a castle.You see an exit to the south.",
+         
+         "weight": "100",
+
+         "exit": [{
+
+            "@title": "Desert",
+
+            "@direction": "South"
+
+         }]
+
+      },
+
+      {
+
+         "name": "Desert",
+
+         "description": "You are in hot dreary desert, surrounded by sand dunes and nothingness, you see an exit to the south.",
+
+		 "weight": "100",
+			
+         "exit": [{
+
+            "@title": "Jerusalem",
+
+            "@direction": "South"
+
+         }]
+
+      },
+
+      {
+
+         "name": "Jerusalem",
+
+         "description": "You are at battlefield of Jerusalem. You are in awe of your surroundings, you see an exit to the west.",
+
+         "weight": "100",
+
+         "exit": [{
+
+            "@title": "Hattin",
+
+            "@direction": "West"
+
+         }]
+
+      },
+
+      {
+
+         "name": "Horns of Hattin",
+
+         "description": "You are at battlefield of Hattin. You see the ruination of the battle and fallen comrades...You see an exit to the north.",
+
+         "weight": "100",
+
+         "exit": [{
+
+            "@title": "Damascus",
+
+            "@direction": "North"
+
+         }]
+
+      },
+
+      {
+
+         "name": "Damascus",
+
+         "description": "You are in Damascus. You see the some shady characters...you see an exit to the west.",
+
+         "weight": "100",
+
+         "exit": [{
+
+            "@title": "Tripoli",
+
+            "@direction": "West"
+
+         }]
+
+      },
+
+      {
+
+         "name": "Tripoli",
+
+         "description": "You are in Tripoli. You see the some more shady characters...you see an exit to the north.",
+
+         "weight": "100",
+
+         "exit": [{
+
+            "@title": "Antioch",
+
+            "@direction": "North"
+
+         }]
+
+      },
+
+      {
+
+         "name": "Antioch",
+
+         "description": "You are in the city of Antioch. You see a long street with high buildings and a castle.. You see the some more shady characters...you see an exit to the north.",
+
+         "weight": "100",
+
+         "exit": [{
+
+            "@title": "Sis",
+
+            "@direction": "North"
+
+         }]
+
+      },
+
+      {
+
+         "name": "Sis",
+
+         "description": "You are in the city of Sis....exit ahead in the west.",
+
+         "weight": "100",
+
+         "exit": [{
+
+            "@title": "Tarsus",
+
+            "@direction": "West"
+
+         }]
+
+      },
+
+      {
+
+         "name": "Tarsus",
+
+         "description": "You are in the city of Tarsus. ...you see an exit to the south.",
+
+         "weight": "100",
+
+         "exit": [{
+
+            "@title": "Cyprus",
+
+            "@direction": "South"
+
+         }]
+
+      },
+
+      {
+
+         "name": "Cyprus",
+
+         "description": "You are in the Cyprus, the Byzantine Empire, your quest is over finally!. ..."
+
+      }
+
+   ],
+
+   "item": [
+
+      {
+
+         "@name": "Sword",
+
+         "@locationID": "1"
+
+      },
+
+      {
+
+         "@name": "Mace",
+
+         "@locationID": "2"
+
+      },
+
+      {
+
+         "@name": "Greek Fire",
+
+         "@locationID": "2"
+
+      },
+
+      {
+
+         "@name": "Food",
+
+         "@locationID": "3"
+
+      },
+
+      {
+
+         "@name": "Medicine",
+
+         "@locationID": "3"
+
+      }
+
+   ],
+
+   "game-character": [
+
+      {
+
+         "@id": "1",
+
+         "@name": "Vicious Saracen",
+
+         "search-algorithm": {
+
+            "@name": "gmit.BeamSearch",
+
+            "@beamWidth": "3"
+
+         },
+
+         "item": {
+
+            "@name": "Scimitar"
+
+         }
+
+      },
+
+      {
+
+         "@id": "2",
+
+         "@name": "Deadly Templar Knight",
+
+         "search-algorithm": {
+
+            "@name": "gmit.BeamSearch",
+
+            "@beamWidth": "3"
+
+         },
+
+         "item": {
+
+            "@name": "Scimitar"
+
+         }
+
+      },
+
+      {
+
+         "@id": "3",
+
+         "@name": "Hospitaller Knight",
+
+         "search-algorithm": {
+
+            "@name": "gmit.BeamSearch",
+
+            "@beamWidth": "3"
+
+         },
+
+         "item": {
+
+            "@name": "Scimitar"
+
+         }
+
+      }
+
+   ]
+
+}
