@@ -2,10 +2,8 @@ package gmit;
 
 import java.io.File;
 import java.io.IOException;
-import java.io.InputStream;
 import java.net.URISyntaxException;
 import java.net.URL;
-import java.util.Scanner;
 
 import com.fasterxml.jackson.core.JsonGenerationException;
 import com.fasterxml.jackson.databind.DeserializationFeature;
@@ -32,11 +30,18 @@ public class GameParser {
 				// read from file, convert it to Location class
 				Location loc = mapper.readValue(new File(sourceURL.toURI()), Location.class);
 				Item item = mapper.readValue(new File(sourceURL.toURI()), Item.class);
+				GameCharacter character = mapper.readValue(new File(sourceURL.toURI()), GameCharacter.class);
 
 		 
 				// display to console
 				System.out.println(loc.toString());
 				System.out.println(item.toString());
+				System.out.println(character.toString());
+				
+				
+
+				
+				
 		 
 			} catch (JsonGenerationException e) {
 		 

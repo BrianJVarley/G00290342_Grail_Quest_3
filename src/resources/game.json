@@ -3,6 +3,7 @@
    "location": [
 
       {
+         "id": "1",
 
          "name": "Tiberius",
 
@@ -21,6 +22,7 @@
       },
 
       {
+      	 "id": "2",
 
          "name": "Desert",
 
@@ -39,6 +41,7 @@
       },
 
       {
+       	 "id": "3",
 
          "name": "Jerusalem",
 
@@ -57,6 +60,8 @@
       },
 
       {
+      
+       	 "id": "4",
 
          "name": "Horns of Hattin",
 
@@ -75,6 +80,7 @@
       },
 
       {
+      	 "id": "5",
 
          "name": "Damascus",
 
@@ -93,6 +99,7 @@
       },
 
       {
+         "id": "6",
 
          "name": "Tripoli",
 
@@ -111,6 +118,8 @@
       },
 
       {
+      
+         "id": "7",
 
          "name": "Antioch",
 
@@ -129,6 +138,7 @@
       },
 
       {
+      	 "id": "8",
 
          "name": "Sis",
 
@@ -147,6 +157,7 @@
       },
 
       {
+       	 "id": "9",
 
          "name": "Tarsus",
 
@@ -165,6 +176,7 @@
       },
 
       {
+         "id": "10",
 
          "name": "Cyprus",
 
@@ -222,21 +234,13 @@
 
       {
 
-         "@id": "1",
+         "name": "Vicious Saracen",
 
-         "@name": "Vicious Saracen",
-
-         "search-algorithm": {
-
-            "@name": "gmit.BeamSearch",
-
-            "@beamWidth": "3"
-
-         },
+         "search-algorithm": "gmit.BeamSearch", 
 
          "item": {
 
-            "@name": "Scimitar"
+            "name": "Scimitar"
 
          }
 
@@ -244,21 +248,14 @@
 
       {
 
-         "@id": "2",
 
-         "@name": "Deadly Templar Knight",
+         "name": "Deadly Templar Knight",
 
-         "search-algorithm": {
-
-            "@name": "gmit.BeamSearch",
-
-            "@beamWidth": "3"
-
-         },
+         "search-algorithm": "gmit.BeamSearch", 
 
          "item": {
 
-            "@name": "Scimitar"
+            "name": "Scimitar"
 
          }
 
@@ -266,21 +263,13 @@
 
       {
 
-         "@id": "3",
+         "name": "Hospitaller Knight",
 
-         "@name": "Hospitaller Knight",
-
-         "search-algorithm": {
-
-            "@name": "gmit.BeamSearch",
-
-            "@beamWidth": "3"
-
-         },
+         "search-algorithm": "gmit.BeamSearch", 
 
          "item": {
 
-            "@name": "Scimitar"
+            "name": "Scimitar"
 
          }
 

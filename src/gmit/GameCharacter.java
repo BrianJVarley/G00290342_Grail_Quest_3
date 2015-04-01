@@ -1,31 +1,47 @@
 package gmit;
 
+import java.util.Arrays;
+
 public class GameCharacter {
 	
-	private String item;
+	private String name;
+	
+	private Item[] item;
 
     private String searchAlgorithm;
 
-    public String getItem ()
-    {
-        return item;
-    }
+	public String getName() {
+		return name;
+	}
 
-    public void setItem (String item)
-    {
-        this.item = item;
-    }
+	public void setName(String name) {
+		this.name = name;
+	}
 
-    public String getSearchAlgorithm ()
-    {
-        return searchAlgorithm;
-    }
+	public Item[] getItem() {
+		return item;
+	}
 
-    public void setSearchAlgorithm (String searchAlgorithm)
-    {
-        this.searchAlgorithm = searchAlgorithm;
-    }
-    
+	public void setItem(Item[] item) {
+		this.item = item;
+	}
+
+	public String getSearchAlgorithm() {
+		return searchAlgorithm;
+	}
+
+	public void setSearchAlgorithm(String searchAlgorithm) {
+		this.searchAlgorithm = searchAlgorithm;
+	}
+
+	@Override
+	public String toString() {
+		return "GameCharacter [name=" + name + ", item="
+				+ Arrays.toString(item) + ", searchAlgorithm="
+				+ searchAlgorithm + "]";
+	}
+
+	
     
     
 
