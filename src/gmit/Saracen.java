@@ -1,5 +1,9 @@
 package gmit;
 
+/**
+ * @author Brian
+ *
+ */
 public class Saracen implements GameCharacterInterface{
 	
 	private float lifeForce = 100.00f;

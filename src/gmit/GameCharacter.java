@@ -2,6 +2,10 @@ package gmit;
 
 import java.util.Arrays;
 
+/**
+ * @author Brian
+ *
+ */
 public class GameCharacter {
 	
 	private String name;

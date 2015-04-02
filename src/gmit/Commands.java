@@ -1,5 +1,9 @@
 package gmit;
 
+/**
+ * @author Brian
+ *
+ */
 public interface Commands {
 
 	String move(String direction);

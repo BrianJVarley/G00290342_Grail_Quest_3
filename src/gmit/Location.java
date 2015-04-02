@@ -5,6 +5,10 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * @author Brian
+ *
+ */
 public class Location {
 	
 	private Location[] location;

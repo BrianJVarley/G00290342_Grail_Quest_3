@@ -76,6 +76,13 @@ CONTENTS
   * Code References
   --------------
   
+  http://www.mkyong.com/java/how-to-convert-java-object-to-from-json-jackson/
+  
+  https://github.com/Progether/JAdventure
+  
+  https://github.com/FasterXML/jackson-docs
+  
+  
   
   
   

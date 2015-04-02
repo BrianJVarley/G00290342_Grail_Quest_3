@@ -4,6 +4,10 @@ import java.util.Arrays;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+/**
+ * @author Brian
+ *
+ */
 public class Exit {
 	
 

@@ -10,6 +10,10 @@ import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+/**
+ * @author Brian
+ *
+ */
 public class GameParser {
 	
 	

@@ -7,6 +7,11 @@ import java.util.Scanner;
 public class Main {
 
 	
+	/**
+	 * @param args
+	 * @throws IOException
+	 * @throws URISyntaxException
+	 */
 	public static void main(String[] args) throws IOException, URISyntaxException {
 		
 		
