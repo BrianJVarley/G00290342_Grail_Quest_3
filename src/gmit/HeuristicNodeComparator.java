@@ -5,7 +5,7 @@ import java.util.Comparator;
 
 /**
  * @author Brian
- *
+ * Adapted from @author John Healy - AI Module GMIT
  */
 public class HeuristicNodeComparator implements Comparator<Location> {
 

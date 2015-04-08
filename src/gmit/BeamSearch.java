@@ -11,7 +11,7 @@ import java.util.List;
 
 /**
  * @author Brian
- *
+ * Adapted from @author John Healy - AI Module GMIT
  */
 public class BeamSearch implements SearchAlgorithm{
 	

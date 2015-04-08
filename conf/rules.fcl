@@ -1,6 +1,3 @@
-
-
-
 FUNCTION_BLOCK rules
 VAR_INPUT
     Our_Health      REAL; (* RANGE(0 .. 100) *) 

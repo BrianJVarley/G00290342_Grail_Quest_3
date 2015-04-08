@@ -1,9 +1,16 @@
 package gmit;
 
 
+import java.net.URL;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
+
+import com.fasterxml.jackson.databind.DeserializationFeature;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 /**
  * @author Brian
@@ -11,6 +18,9 @@ import java.util.Map;
  */
 public class Location {
 	
+		
+	private ArrayList<Location> allLocations = new ArrayList<Location>();
+
 	private Location[] location;
 	
 	private int id;
@@ -29,7 +39,11 @@ public class Location {
 	private Location parent;
 	
 	private Map<Location, Integer> children = new HashMap<Location, Integer>();
-
+	
+	public Location() {
+		super();
+		//System.out.println("Going through constructor");
+	}
 
 	public Location(String name){
 		this.name = name;
@@ -158,7 +172,33 @@ public class Location {
 	public void setParent(Location parent) {
 		this.parent = parent;
 	}
-
+	
+	public Location findLocation(Integer locationId) {
+		Location result = null;
+		for (Location l : location) {
+			result = dfs(new HashSet<Location>(), l, locationId);
+			if (result != null)
+				System.out.println("Result: " + result);
+				break;
+		}
+		return result;
+	}
+	
+	private Location dfs(Set<Location> visitedAlready, Location current,
+			Integer id) {
+		if (current.id == id)
+			return current;
+		visitedAlready.add(current); 
+		Location result = null;
+		for (Location l : current.location) {
+			result = dfs(visitedAlready, l, id);
+			if (result != null)
+				break;
+		}
+		return result;
+	}
+	
+	
 	@Override
 	public String toString() {
 		return "Location [location=" + Arrays.toString(location) + ", id=" + id
