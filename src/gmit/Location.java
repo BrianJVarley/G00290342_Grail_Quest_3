@@ -176,6 +176,7 @@ public class Location {
 	public Location findLocation(Integer locationId) {
 		Location result = null;
 		for (Location l : location) {
+			System.out.println("In find method...");
 			result = dfs(new HashSet<Location>(), l, locationId);
 			if (result != null)
 				System.out.println("Result: " + result);

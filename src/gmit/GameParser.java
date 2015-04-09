@@ -4,6 +4,8 @@ import java.io.File;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.net.URL;
+import java.util.HashSet;
+import java.util.Scanner;
 
 import com.fasterxml.jackson.core.JsonGenerationException;
 import com.fasterxml.jackson.databind.DeserializationFeature;
@@ -35,13 +37,18 @@ public class GameParser {
 				loc = mapper.readValue(new File(sourceURL.toURI()), Location.class);
 				Item item = mapper.readValue(new File(sourceURL.toURI()), Item.class);
 				GameCharacter character = mapper.readValue(new File(sourceURL.toURI()), GameCharacter.class);
-	
+
+				
 				// display to console
 				System.out.println(loc.toString());
 				System.out.println(item.toString());
 				System.out.println(character.toString());
 				
+				Scanner console = new Scanner(System.in);
+			    System.out.println("Enter the location ID between 1 - 10 to where you want to go:");
+		        int locatioId = console.nextInt();
 				
+				loc.findLocation(locatioId);
 			
 			} catch (JsonGenerationException e) {
 		 
@@ -60,6 +67,5 @@ public class GameParser {
 			
 			
 		}
-
-
+		
 }

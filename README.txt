@@ -35,13 +35,11 @@ CONTENTS
  * Game Controls
   --------------
  
- * Go
- * Directions: N/S/E/W/NE/SW
- * Look (Used in conjunction with Direction controls, eg Look N)
- * Wait
- * Tell(Used in conjunction with Character, eg Tell Inn-Keeper)
- * Get (Used in conjunction with Object, eg Get Medicine)
- * Kill(Used in conjunction with Character, eg Kill Saracen)
+ * Directions: North, South, West, East
+ * move (Used in conjunction with Direction controls, eg move North)
+ * pickUp (Used in conjunction with items, eg pickUp Medicine)
+ * use (Used in conjunction with items, eg use sword)
+ * kill(Used in conjunction with Character, eg Kill Saracen)
  
  
  * Troubleshooting
@@ -68,7 +66,7 @@ CONTENTS
     rather than just one.
   * Map could have involved more variables such as plateaus,
     to demonstrate the effectiveness of the search algorithms
-    and more route options.
+    and more route options, instead of a hierarchial map.
   * A greater variance of objects and inventory could be added to 
     improve game play variables and experience.
     
@@ -81,6 +79,15 @@ CONTENTS
   https://github.com/Progether/JAdventure
   
   https://github.com/FasterXML/jackson-docs
+  
+  http://www.javacoffeebreak.com/text-adventure/
+  
+  http://en.wikibooks.org/wiki/Artificial_Intelligence/Search/Heuristic_search/Beam_search
+ 
+  http://jfuzzylogic.sourceforge.net/html/example_fcl.html 
+  
+  
+  
   
   
   
