@@ -18,10 +18,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
  */
 public class Location {
 	
-		
-	private ArrayList<Location> allLocations = new ArrayList<Location>();
-
-	private Location[] location;
+    private Location[] location;
 	
 	private int id;
 
@@ -85,16 +82,6 @@ public class Location {
 		children.remove(child);
 	}
    
-
-	public Location[] getLocation() {
-		return location;
-	}
-
-	public void setLocation(Location[] location) {
-		this.location = location;
-	}
-	
-
 	public int getId() {
 		return id;
 	}
@@ -141,6 +128,14 @@ public class Location {
 	}
 	
 	
+	public Location[] getLocation() {
+		return location;
+	}
+
+	public void setLocation(Location[] location) {
+		this.location = location;
+	}
+
 	public boolean isVisited() {
 		return visited;
 	}
@@ -173,40 +168,45 @@ public class Location {
 		this.parent = parent;
 	}
 	
+	
 	public Location findLocation(Integer locationId) {
 		Location result = null;
 		for (Location l : location) {
 			System.out.println("In find method...");
-			result = dfs(new HashSet<Location>(), l, locationId);
+			result = depthFirstSearch(new HashSet<Location>(), l, locationId);
 			if (result != null)
-				System.out.println("Result: " + result);
+				System.out.println("You are now in.." + result);
 				break;
 		}
 		return result;
 	}
 	
-	private Location dfs(Set<Location> visitedAlready, Location current,
+	private Location depthFirstSearch(Set<Location> visitedAlready, Location current,
 			Integer id) {
 		if (current.id == id)
 			return current;
 		visitedAlready.add(current); 
 		Location result = null;
 		for (Location l : current.location) {
-			result = dfs(visitedAlready, l, id);
+			result = depthFirstSearch(visitedAlready, l, id);
 			if (result != null)
 				break;
 		}
 		return result;
 	}
-	
-	
+
 	@Override
 	public String toString() {
 		return "Location [location=" + Arrays.toString(location) + ", id=" + id
 				+ ", description=" + description + ", weight=" + weight
-				+ ", name=" + name + ", exit=" + Arrays.toString(exit)
-				+"]";
+				+ ", name=" + name + ", exit=" + Arrays.toString(exit) + "]";
 	}
+
+	
+	
+	
+	
+	
 
 	
 
