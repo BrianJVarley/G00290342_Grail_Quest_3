@@ -24,10 +24,21 @@ public class Main {
 	    System.out.println("Hit enter to begin your quest to the Kingdom of Cyprus..");
 	    new Scanner(System.in).nextLine();
 	    
-	    GameParser parser = new GameParser();
-		parser.parse();
-			
+	    //GameParser parser = new GameParser();
+		//parser.parse();
+	    
+	    
+		//Create a game graph
+	    GameGraph graph = new GameGraph();
 		
+		
+		//Creating a map
+	    GameMap gm = new GameMap();
+		Location start = gm.getStartNode();
+		start.setVisited(true);
+		BeamSearch bf = new BeamSearch();
+		bf.search(start);
+	
 		
 	}
 

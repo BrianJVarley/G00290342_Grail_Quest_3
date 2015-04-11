@@ -1,44 +1,53 @@
 package gmit;
 
-import java.util.Collection;
+import java.util.HashMap;
 import java.util.Map;
 
+import org.jgrapht.alg.KruskalMinimumSpanningTree;
+import org.jgrapht.graph.DefaultWeightedEdge;
+import org.jgrapht.graph.SimpleDirectedWeightedGraph;
+
+
+/**
+ * @author Brian
+ * Adapted from jgrapht "SimpleDirectedWeightedGraph" Demo Sample
+ */
 public class Graph {
 
-    private class Vertex {
-        Map<String,Object> properties;
-        private Map<String,Edge> edges;
-
-        public Graph addVertex(String edgeName, Vertex v) {
-            Edge e = edges.get(edgeName);
-            if(e == null) {
-                e = new Edge(this);
-                edges.put(edgeName,e);
-            }
-
-            e.addVertex(v);
-            return Graph.this;
-        }
-
-        public Graph addVertex(Vertex v) {
-            return addVertex("anonymous",v);
-        }
-
+    private final SimpleDirectedWeightedGraph<String, DefaultWeightedEdge> g = new SimpleDirectedWeightedGraph<String, DefaultWeightedEdge>(DefaultWeightedEdge.class);
+    static final double DEFAULT_EDGE_WEIGHT=19;
+    private DefaultWeightedEdge e1;
+    
+    
+    
+    public void addVertex(String name) {
+        g.addVertex(name);
     }
 
-    private static class Edge {
-        Map<String,Object> properties;
-        Vertex in;
-        Collection<Vertex> out;
-
-        private Edge(Vertex in) {
-            this.in = in;
-        }
-
-
-        private void addVertex(Vertex v) {
-            out.add(v);
-        }
+    public void addEdge(String v1, String v2) {
+        e1 =g.addEdge(v1, v2);
+        System.out.println("Edge added: " + e1.toString());
     }
 
+    public void setEdgeWeight(String EDGE_WEIGHT) {
+        g.setEdgeWeight(e1, Double.valueOf(EDGE_WEIGHT));          
+    }
+
+    public SimpleDirectedWeightedGraph<String, DefaultWeightedEdge> getGraph() {
+        return g;
+    }
+
+
+    public void getSpanningTree() {
+        KruskalMinimumSpanningTree k = new KruskalMinimumSpanningTree(g);
+        System.out.println(k.getEdgeSet().toString());
+        
+    }
+
+    public void getSpanningTreeCost() {
+        KruskalMinimumSpanningTree k = new KruskalMinimumSpanningTree(g);
+        System.out.println(k.getSpanningTreeCost());
+    }
+
+	
 }

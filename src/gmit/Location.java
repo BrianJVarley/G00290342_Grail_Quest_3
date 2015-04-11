@@ -39,7 +39,6 @@ public class Location {
 	
 	public Location() {
 		super();
-		//System.out.println("Going through constructor");
 	}
 
 	public Location(String name){
@@ -50,6 +49,8 @@ public class Location {
 		this.name = name;
 		this.approximateDistanceFromGoal = goalDistance;
 	}
+	
+	
 	
 	public Location[] children(){
 		return (Location[]) children.keySet().toArray(new Location[children.size()]);

@@ -70,4 +70,6 @@ public class BeamSearch implements SearchAlgorithm{
 		}
 		return distance;
 	}
+
+	
 }

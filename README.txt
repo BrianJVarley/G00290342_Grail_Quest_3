@@ -61,6 +61,12 @@ CONTENTS
  * Design Critiques & Notes
   --------------
   
+  *I had originally planned to create the graph on the fly
+   from the parsed in Game file in resourceS. But the file path
+   specified to the resource didn't work when the application
+   was exported to a Jar file. The parsing does work at the moment
+   if you uncomment the call to parse() in main and run from
+   Eclispe.  
   * Game Character / Observers should be using a mix
     of search algorithms based on their character type
     rather than just one.
@@ -86,6 +92,9 @@ CONTENTS
  
   http://jfuzzylogic.sourceforge.net/html/example_fcl.html 
   
+  https://github.com/jgrapht/jgrapht
+  
+  http://stackoverflow.com/questions/20242961/getting-weighted-graphs-to-work-in-jgrapht
   
   
   

@@ -44,15 +44,13 @@ public class GameParser {
 				loc = mapper.readValue(new File(sourceURL.toURI()), Location.class);
 				Item item = mapper.readValue(new File(sourceURL.toURI()), Item.class);
 				GameCharacter character = mapper.readValue(new File(sourceURL.toURI()), GameCharacter.class);
-				
-				GameParser parser = mapper.readValue(new File(sourceURL.toURI()), GameParser.class);
-				
+								
 				// display to console
 				System.out.println(loc.toString());
 				System.out.println(item.toString());
 				System.out.println(character.toString());
 				
-
+							
 				
 				while(locationId < 11){
 					

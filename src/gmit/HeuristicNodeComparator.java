@@ -9,16 +9,16 @@ import java.util.Comparator;
  */
 public class HeuristicNodeComparator implements Comparator<Location> {
 
-	@Override
 	public int compare(Location loc1, Location loc2) {
 		if (loc1.getApproximateDistanceFromGoal() > loc2.getApproximateDistanceFromGoal()){
 			return 1;
-		}else if (loc1.getApproximateDistanceFromGoal() < loc2.getApproximateDistanceFromGoal()){
+		}else if (loc2.getApproximateDistanceFromGoal() < loc2.getApproximateDistanceFromGoal()){
 			return -1;
 		}else{
 			return 0;
 		}
 	}
 
+	
 	
 }

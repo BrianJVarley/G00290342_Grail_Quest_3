@@ -30,7 +30,7 @@ public class Saracen implements GameCharacterInterface {
 	public void run() {
 		while (lifeForce > 0.00f){
 			 
-			
+			System.out.println("Saracen is running nearby");
 			try {
 				Thread.sleep(10000);
 			} catch (InterruptedException e) {
