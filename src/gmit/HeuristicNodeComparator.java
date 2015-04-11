@@ -4,7 +4,7 @@ package gmit;
 import java.util.Comparator;
 
 /**
- * @author Brian
+ * @author Brian Varley
  * Adapted from @author John Healy - AI Module GMIT
  */
 public class HeuristicNodeComparator implements Comparator<Location> {

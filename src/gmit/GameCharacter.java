@@ -3,7 +3,7 @@ package gmit;
 import java.util.Arrays;
 
 /**
- * @author Brian
+ * @author Brian Varley
  *
  */
 public class GameCharacter {

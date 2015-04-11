@@ -5,7 +5,7 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * @author Brian
+ * @author Brian Varley
  *
  */
 public class Exit {

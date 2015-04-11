@@ -9,7 +9,7 @@ import org.jgrapht.graph.SimpleDirectedWeightedGraph;
 
 
 /**
- * @author Brian
+ * @author Brian Varley
  * Adapted from jgrapht "SimpleDirectedWeightedGraph" Demo Sample
  */
 public class Graph {

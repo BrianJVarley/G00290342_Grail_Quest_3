@@ -1,7 +1,7 @@
 package gmit;
 
 /**
- * @author Brian
+ * @author Brian Varley
  *
  */
 public interface SearchAlgorithm {

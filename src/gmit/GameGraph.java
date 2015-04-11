@@ -3,7 +3,7 @@ package gmit;
 public class GameGraph {
 	
 	/**
-	 * @author Brian
+	 * @author Brian Varley
 	 */
 	public GameGraph() {
 		

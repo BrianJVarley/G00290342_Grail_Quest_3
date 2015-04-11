@@ -1,7 +1,7 @@
 package gmit;
 
 /**
- * @author Brian
+ * @author Brian Varley
  *
  */
 public class Saracen implements GameCharacterInterface {
@@ -29,8 +29,15 @@ public class Saracen implements GameCharacterInterface {
 	//Once a run() returns, the thread dies
 	public void run() {
 		while (lifeForce > 0.00f){
-			 
+			
 			System.out.println("Saracen is running nearby");
+			GameMap gm = new GameMap();
+			Location start = gm.getStartNode();
+			start.setVisited(true);
+			BeamSearch bf = new BeamSearch();
+			bf.search(start);
+			
+			
 			try {
 				Thread.sleep(10000);
 			} catch (InterruptedException e) {

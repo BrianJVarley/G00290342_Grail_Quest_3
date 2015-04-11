@@ -10,7 +10,7 @@ import java.util.List;
 
 
 /**
- * @author Brian
+ * @author Brian Varley
  * Adapted from @author John Healy - AI Module GMIT
  */
 public class BeamSearch implements SearchAlgorithm{
@@ -45,6 +45,7 @@ public class BeamSearch implements SearchAlgorithm{
 					}
 				}
 				System.out.println(queue);
+				totalDistance = totalDistance + location.getDistance(queue.getFirst());
 				location = queue.getFirst();
 				location.setVisited(true);
 			}

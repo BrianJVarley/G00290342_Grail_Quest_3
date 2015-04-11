@@ -1,7 +1,7 @@
 package gmit;
 
 /**
- * @author Brian
+ * @author Brian Varley
  *
  */
 public interface Commands {
@@ -11,4 +11,6 @@ public interface Commands {
     String pickUp(String item);
 
     String use(String item);
+    
+    String kill(String gameCharacter);
 }
