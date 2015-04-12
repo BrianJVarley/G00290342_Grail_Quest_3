@@ -7,7 +7,8 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * @author Brian Varley Adapted from @author John Healy - AI Module GMIT
+ * @author Brian Varley 
+ * Adapted from @author John Healy - AI Module GMIT
  */
 public class BeamSearch implements SearchAlgorithm {
 
