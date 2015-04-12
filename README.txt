@@ -36,10 +36,10 @@ CONTENTS
   --------------
  
  * Directions: North, South, West, East
- * move (Used in conjunction with Direction controls, eg move North)
+ * move (Used in conjunction with directions, eg move North)
  * pickUp (Used in conjunction with items, eg pickUp Medicine)
  * use (Used in conjunction with items, eg use sword)
- * kill(Used in conjunction with Character, eg Kill Saracen)
+ * attack(Used in conjunction with Character type, eg Kill Saracen)
  
  
  * Troubleshooting

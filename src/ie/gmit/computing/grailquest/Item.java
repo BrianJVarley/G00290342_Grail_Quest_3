@@ -1,5 +1,6 @@
-package gmit;
+package ie.gmit.computing.grailquest;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -9,14 +10,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  *
  */
 public class Item {
-	
+
 	private Item[] item;
-	
+
 	@JsonProperty("@name")
-    private String name;
-	
+	private String name;
+
 	@JsonProperty("@locationID")
-    private String locationID;
+	private String locationID;
 
 	public Item[] getItem() {
 		return item;
@@ -47,8 +48,5 @@ public class Item {
 		return "Item [item=" + Arrays.toString(item) + ", name=" + name
 				+ ", locationID=" + locationID + "]";
 	}
-	
-	
-	
 
 }

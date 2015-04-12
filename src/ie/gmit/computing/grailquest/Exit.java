@@ -1,4 +1,4 @@
-package gmit;
+package ie.gmit.computing.grailquest;
 
 import java.util.Arrays;
 
@@ -9,13 +9,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  *
  */
 public class Exit {
-	
 
 	@JsonProperty("@title")
-    private String title;
-	
+	private String title;
+
 	@JsonProperty("@direction")
-    private String direction;
+	private String direction;
 
 	public String getTitle() {
 		return title;
@@ -37,8 +36,5 @@ public class Exit {
 	public String toString() {
 		return "Exit [title=" + title + ", direction=" + direction + "]";
 	}
-
-		
-	
 
 }

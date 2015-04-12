@@ -1,11 +1,11 @@
-package gmit;
+package ie.gmit.computing.grailquest;
 
 /**
  * @author Brian Varley
  *
  */
 public class Saracen implements GameCharacterInterface {
-	
+
 	private float lifeForce = 100.00f;
 	private String name;
 
@@ -18,38 +18,28 @@ public class Saracen implements GameCharacterInterface {
 	@Override
 	public void setName(String name) {
 		// TODO Auto-generated method stub
-        this.name = name;
+		this.name = name;
 
-		
 	}
-	
 
-	
-	
-	//Once a run() returns, the thread dies
+	// Once a run() returns, the thread dies
 	public void run() {
-		while (lifeForce > 0.00f){
-			
-			System.out.println("Saracen is running nearby");
-			GameMap gm = new GameMap();
-			Location start = gm.getStartNode();
-			start.setVisited(true);
-			BeamSearch bf = new BeamSearch();
-			bf.search(start);
-			
-			
+		while (lifeForce > 0.00f) {
 			try {
+				System.out.println("Saracen is running nearby");
+				GameMap gm = new GameMap();
+				Location start = gm.getStartNode();
+				start.setVisited(true);
+				BeamSearch bf = new BeamSearch();
+				bf.search(start);
 				Thread.sleep(10000);
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			
+
 		}
 		System.out.println(this.getName() + " has just died...");
 	}
-	
-	
-	
 
 }

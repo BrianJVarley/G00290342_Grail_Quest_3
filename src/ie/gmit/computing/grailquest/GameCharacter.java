@@ -1,4 +1,4 @@
-package gmit;
+package ie.gmit.computing.grailquest;
 
 import java.util.Arrays;
 
@@ -7,12 +7,12 @@ import java.util.Arrays;
  *
  */
 public class GameCharacter {
-	
+
 	private String name;
-	
+
 	private Item[] item;
 
-    private String searchAlgorithm;
+	private String searchAlgorithm;
 
 	public String getName() {
 		return name;
@@ -44,9 +44,5 @@ public class GameCharacter {
 				+ Arrays.toString(item) + ", searchAlgorithm="
 				+ searchAlgorithm + "]";
 	}
-
-	
-    
-    
 
 }

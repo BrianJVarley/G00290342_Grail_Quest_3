@@ -1,4 +1,4 @@
-package gmit;
+package ie.gmit.computing.grailquest;
 
 /**
  * @author Brian Varley
