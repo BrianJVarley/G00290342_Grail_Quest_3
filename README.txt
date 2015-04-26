@@ -2,6 +2,10 @@ Grail Quest - Brian Varley / G00290342
 
 CONTENTS 
 ---------------------
+
+Grail Quest console application:   
+
+(https://www.youtube.com/watch?v=C4RPPNqqVZE)
    
  * Introduction
  --------------
@@ -35,11 +39,13 @@ CONTENTS
  * Game Controls
   --------------
  
- * Directions: North, South, West, East
- * move (Used in conjunction with directions, eg move North)
- * pickUp (Used in conjunction with items, eg pickUp Medicine)
+ * move (moves to the next location in the map)
+ * get (Used in conjunction with items, eg get)
  * use (Used in conjunction with items, eg use sword)
  * attack(Used in conjunction with Character type, eg Kill Saracen)
+ * search (Searches the game map based on your current location)
+ * look (Gets description of current location)
+ * inventory (Displays inventory contents)
  
  
  * Troubleshooting
@@ -62,11 +68,13 @@ CONTENTS
   --------------
   
   *I had originally planned to create the graph on the fly
-   from the parsed in Game file in resourceS. But the file path
+   from the parsed in Game file in resources. But the file path
    specified to the resource didn't work when the application
    was exported to a Jar file. The parsing does work at the moment
    if you uncomment the call to parse() in main and run from
    Eclispe.  
+  *Threading of players in the game wasn't inplemented due to time
+   constraints from working on the parsing aspect of the project.
   * Game Character / Observers should be using a mix
     of search algorithms based on their character type
     rather than just one.

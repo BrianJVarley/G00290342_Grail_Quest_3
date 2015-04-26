@@ -23,6 +23,10 @@ public class Main {
 		// Array list used to store items picked up during game play
 		ArrayList<String> inventory = new ArrayList<String>();
 
+		// Array list used to store players
+		ArrayList<Saracen> saracens = new ArrayList<Saracen>();
+		ArrayList<Knight> knights = new ArrayList<Knight>();
+
 		// Start screen prompt
 		System.out
 				.println("********************************GRAIL QUEST************************************");
@@ -36,6 +40,8 @@ public class Main {
 		System.out.println("*Look");
 		System.out.println("*Get");
 		System.out.println("*Attack");
+		System.out.println("*Search");
+		System.out.println("*Inventory");
 		System.out.println("");
 		System.out
 				.println("Hit enter to begin your quest to the Kingdom of Cyprus..");
@@ -52,22 +58,26 @@ public class Main {
 
 		System.out
 				.println("Testing game map, created using map example from AI lab");
-		// Creating a map
-		GameMap gm = new GameMap();
-		Location start = gm.getStartNode();
-		start.setVisited(true);
-		BeamSearch bf = new BeamSearch();
-		bf.search(start);
 
+		// Add Saracen and Knight players
+		Saracen saracenObj = new Saracen();
+		Knight knightObj = new Knight();
+
+		for (int i = 0; i < 17; i++) {
+			saracenObj.setName("Jim");
+			knightObj.setName("John");
+			// add objects to the player array lists
+			saracens.add(saracenObj);
+			knights.add(knightObj);
+		}
+
+		// Creating game map
 		GameMap playerMap = new GameMap();
-		playerMap.getStartNode();
-
 		startNode = playerMap.getStartNode();
+		inventory.add("Holy Grail");
 
 		// main game loop
 		while (gameNotOver) {
-
-			Main mainObj = new Main();
 
 			// Take in user commands here
 			// and parse commands
@@ -76,13 +86,10 @@ public class Main {
 				System.out.println("Description: ");
 			} else if (input.equals("look")) {
 				System.out.println(startNode.toString());
-
 			} else if (input.equals("move")) {
 				System.out.println("Moving.. ");
-				while (nodeIterator.hasNext()) {
-					startNode = startNode.next();
-					System.out.println(startNode.toString());
-				}
+				startNode = startNode.next();
+				System.out.println(startNode.toString());
 			} else if (input.equals("get")) {
 				System.out.println("Picking up item");
 				if (startNode.getItem() != null) {
@@ -98,6 +105,18 @@ public class Main {
 			} else if (input.equals("attack")) {
 
 				System.out.println("attacking..");
+
+			} else if (input.equals("inventory")) {
+
+				System.out.println("checking inventory..");
+				System.out.println(inventory.toString());
+
+			} else if (input.equals("search")) {
+
+				System.out.println("searching game map route..");
+				startNode.setVisited(true);
+				BeamSearch beamSearch = new BeamSearch();
+				beamSearch.search(startNode);
 
 			} else if (input.equals("quit")) {
 				System.out.println("Goodbye!");
